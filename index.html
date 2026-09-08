@@ -853,7 +853,6 @@
           }`;
           dot.addEventListener('click', () => {
             goToSlide(idx);
-            resetAutoPlay();
           });
           carouselDots.appendChild(dot);
         });
@@ -885,12 +884,10 @@
         // Prev & Next Clicks
         prevBtn.addEventListener('click', () => {
           goToSlide(activeIndex - 1);
-          resetAutoPlay();
         });
 
         nextBtn.addEventListener('click', () => {
           goToSlide(activeIndex + 1);
-          resetAutoPlay();
         });
 
         // Sync with Touch Scroll / Swipe
@@ -904,32 +901,8 @@
             if (nearestIndex !== activeIndex && nearestIndex >= 0 && nearestIndex < totalSlides) {
               updatePagination(nearestIndex);
             }
-          }, 60);
+          }, 50);
         }, { passive: true });
-
-        // Auto play (advance every 5 seconds)
-        const startAutoPlay = () => {
-          autoPlayTimer = setInterval(() => {
-            goToSlide(activeIndex + 1);
-          }, 5000);
-        };
-
-        const stopAutoPlay = () => {
-          if (autoPlayTimer) clearInterval(autoPlayTimer);
-        };
-
-        const resetAutoPlay = () => {
-          stopAutoPlay();
-          startAutoPlay();
-        };
-
-        // Pause on interaction
-        carousel.addEventListener('mouseenter', stopAutoPlay);
-        carousel.addEventListener('mouseleave', startAutoPlay);
-        carousel.addEventListener('touchstart', stopAutoPlay, { passive: true });
-        carousel.addEventListener('touchend', startAutoPlay, { passive: true });
-
-        startAutoPlay();
       }
     });
   </script>
