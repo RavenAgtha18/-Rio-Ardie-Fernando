@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rio Ardie Fernando | ISP Semarang - Link in Bio</title>
   <meta name="description"
-    content="Official Link in Bio Rio Ardie Fernando, Capital Market Educator Mirae Asset Sekuritas Semarang & ISP Semarang. Akses edukasi kantor, sertifikasi CIC, grup investor, dan kalkulator saham.">
+    content="Official Link in Bio Rio Ardie Fernando, Capital Market Educator Mirae Asset Sekuritas Semarang & ISP Semarang. Akses edukasi kantor, grup investor, dan smart tools kalkulator saham, compounding & dividen.">
 
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +43,9 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Chart.js CDN for Luxury Financial Visuals -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <style>
     body {
       background-color: #f1f5f9;
@@ -77,10 +80,27 @@
       animation: pulse-subtle 3s infinite ease-in-out;
     }
 
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
     /* Hide scrollbar for carousel */
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
+
     .no-scrollbar {
       -ms-overflow-style: none;
       scrollbar-width: none;
@@ -135,8 +155,8 @@
         </div>
       </header>
 
-      <!-- 2. FEATURED CARDS: PROGRAM & LAYANAN EDUKASI -->
-      <section class="space-y-4 mb-6" aria-label="Program Edukasi & Sertifikasi">
+      <!-- 2. FEATURED SERVICE: IN-HOUSE INVESTMENT EDUCATION -->
+      <section class="mb-6" aria-label="Program Edukasi Investasi">
 
         <!-- CARD 1: EDUKASI INVESTASI KANTOR (MIRAE ASSET) -->
         <article
@@ -211,88 +231,6 @@
           </div>
         </article>
 
-        <!-- CARD 2: SERTIFIKASI PROFESI KONSULTAN INVESTASI (CIC®) -->
-        <article
-          class="bg-gradient-to-br from-white via-sky-50/40 to-indigo-50/40 rounded-3xl p-5 border border-sky-200/80 card-shadow relative overflow-hidden">
-          <!-- Top badge -->
-          <div class="flex items-center justify-between gap-2 mb-3">
-            <div
-              class="flex items-center gap-1.5 bg-blue-600 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-xs">
-              <i class="fa-solid fa-award"></i> Sertifikasi IARFC
-            </div>
-            <span
-              class="text-[10px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-              <i class="fa-solid fa-calendar-day text-[9px]"></i> 19 - 20 Sept 2026
-            </span>
-          </div>
-
-          <!-- Header & Title -->
-          <div class="mb-3">
-            <div class="flex items-center justify-between text-[11px] text-slate-500 font-medium mb-1">
-              <span>Organized by <strong class="text-slate-800">Wealthiest.id</strong></span>
-              <span>Available on <strong class="text-emerald-700">payuung pribadi</strong></span>
-            </div>
-            <h2 class="text-base font-extrabold text-slate-900 leading-snug">
-              Sertifikasi Profesi Konsultan Investasi
-            </h2>
-            <p class="text-xs font-bold text-sky-700 mt-0.5">
-              Certified Investment Consultant (CIC®) • Live Zoom (2 Days)
-            </p>
-            <p class="text-[11px] italic text-slate-500 mt-1">
-              "Menjadi Educator dan Konsultan Investasi yang siap praktek dan kredibel."
-            </p>
-          </div>
-
-          <!-- Benefits Chips -->
-          <div class="grid grid-cols-2 gap-1.5 mb-3.5 text-[11px]">
-            <div class="bg-white rounded-xl p-2 border border-sky-100 flex items-center gap-2">
-              <i class="fa-solid fa-graduation-cap text-sky-600"></i>
-              <span class="font-semibold text-slate-800">Gelar Resmi CIC®</span>
-            </div>
-            <div class="bg-white rounded-xl p-2 border border-sky-100 flex items-center gap-2">
-              <i class="fa-solid fa-file-certificate text-sky-600"></i>
-              <span class="font-semibold text-slate-800">Sertifikat & Transkrip</span>
-            </div>
-            <div class="bg-white rounded-xl p-2 border border-sky-100 flex items-center gap-2">
-              <i class="fa-solid fa-mobile-screen text-sky-600"></i>
-              <span class="font-semibold text-slate-800">Aplikasi Perencana</span>
-            </div>
-            <div class="bg-white rounded-xl p-2 border border-sky-100 flex items-center gap-2">
-              <i class="fa-solid fa-id-card text-sky-600"></i>
-              <span class="font-semibold text-slate-800">Official E-ID Card</span>
-            </div>
-          </div>
-
-          <!-- Mentors Highlight -->
-          <div class="bg-slate-50/90 rounded-2xl p-2.5 border border-slate-200/70 mb-3.5">
-            <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">
-              <i class="fa-solid fa-chalkboard-user mr-1 text-slate-400"></i> Our Mentors:
-            </div>
-            <div class="space-y-1 text-[11px]">
-              <div class="flex items-center justify-between text-slate-700">
-                <span><strong>Mirzan Hasan</strong>, CIC, WMI, RFC</span>
-                <span class="text-[10px] text-slate-400">Founder Wealthiest.id</span>
-              </div>
-              <div class="flex items-center justify-between text-slate-700">
-                <span><strong>Rio Ardie Fernando</strong>, RTA, AWP, CIC</span>
-                <span class="text-[10px] text-sky-600 font-medium">Market Educator</span>
-              </div>
-              <div class="flex items-center justify-between text-slate-700">
-                <span><strong>Fadhil M Hafizd</strong>, S.Aktr., CIC, AWP</span>
-                <span class="text-[10px] text-slate-400">Bitcoin Enthusiast</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Action Button -->
-          <a href="https://wa.me/6287871871240?text=Halo%20Pak%20Rio%20Ardie,%20saya%20ingin%20mendaftar/tanya%20informasi%20Sertifikasi%20Profesi%20CIC%20(Certified%20Investment%20Consultant)%20Wealthiest.id."
-            target="_blank" rel="noopener noreferrer"
-            class="w-full bg-slate-900 hover:bg-slate-800 active:scale-[0.98] transition-all text-white font-bold text-xs py-2.5 px-3 rounded-xl shadow-sm flex items-center justify-center gap-2">
-            <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
-            <span>Daftar Sertifikasi CIC via WA</span>
-          </a>
-        </article>
-
       </section>
 
       <!-- 3. LINK BUTTONS (LINKTREE STYLE) -->
@@ -300,7 +238,7 @@
         <h3 class="text-xs font-extrabold uppercase tracking-wider text-slate-400 px-1 mb-1">Quick Links</h3>
 
         <!-- Link 1: Mirae Asset (s.id/openakunsaham) -->
-        <a href="https://s.id/openakunsaham" target="_blank" rel="noopener noreferrer"
+        <!-- <a href="https://s.id/openakunsaham" target="_blank" rel="noopener noreferrer"
           class="group relative w-full bg-brand-blue hover:bg-brand-blueHover active:scale-[0.98] transition-all duration-200 rounded-2xl p-4 flex items-center justify-between border border-blue-200/80 shadow-sm hover:shadow-md">
           <span
             class="absolute -top-2.5 right-4 bg-indigo-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">
@@ -319,7 +257,7 @@
           </div>
           <i
             class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-slate-700 transition-colors"></i>
-        </a>
+        </a> -->
 
         <!-- Link 2: Join Sosmed Universe (taplink.cc/sahamgrowth) -->
         <a href="https://taplink.cc/sahamgrowth" target="_blank" rel="noopener noreferrer"
@@ -410,121 +348,454 @@
 
       </section>
 
-      <!-- 4. MINI-APP: KALKULATOR SNIPER SAHAM -->
+      <!-- 4. FINANCIAL TOOLS SUITE: SNIPER SAHAM, COMPOUNDING & DIVIDEN -->
       <section class="bg-white rounded-3xl p-5 sm:p-6 card-shadow border border-slate-100/90 relative overflow-hidden"
-        aria-label="Kalkulator Saham">
-        <!-- Top decorative banner -->
-        <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+        aria-label="Smart Financial Tools">
+
+        <!-- Header Section -->
+        <div class="flex items-center justify-between pb-3.5 mb-4 border-b border-slate-100">
           <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-bold">
-              <i class="fa-solid fa-calculator"></i>
+            <div
+              class="w-8 h-8 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 text-white flex items-center justify-center text-sm font-bold shadow-xs">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
             <div>
-              <h2 class="text-sm font-extrabold text-slate-900">Kalkulator Sniper Saham</h2>
-              <p class="text-[11px] text-slate-500">Hitung estimasi profit/loss (1 Lot = 100 Lbr)</p>
+              <h2 class="text-sm font-extrabold text-slate-900 flex items-center gap-1.5">
+                Smart Investor Tools
+                <span
+                  class="text-[9px] font-bold uppercase tracking-wider bg-sky-100 text-sky-800 px-1.5 py-0.5 rounded-full">Pro</span>
+              </h2>
+              <p class="text-[11px] text-slate-500 font-medium">Hitung cuan & visualisasikan pertumbuhan aset</p>
             </div>
           </div>
-          <button type="button" id="btnReset"
-            class="text-xs text-slate-400 hover:text-rose-500 font-medium transition-colors" title="Reset Form">
-            <i class="fa-solid fa-rotate-right mr-1"></i>Reset
+          <button type="button" id="btnSuiteReset"
+            class="text-xs text-slate-400 hover:text-rose-500 font-medium transition-colors flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-rose-50"
+            title="Reset Kalkulator Aktif">
+            <i class="fa-solid fa-rotate-right text-[11px]"></i>
+            <span class="hidden sm:inline">Reset</span>
           </button>
         </div>
 
-        <!-- Form Inputs -->
-        <form id="stockCalcForm" class="space-y-3.5" onsubmit="event.preventDefault();">
-
-          <!-- Row 1: Emiten & Lot -->
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label for="stockCode" class="block text-xs font-semibold text-slate-700 mb-1">Kode Emiten</label>
-              <div class="relative">
-                <input type="text" id="stockCode" placeholder="e.g. BBRI" maxlength="6"
-                  class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400 transition-all"
-                  required>
-                <i class="fa-solid fa-tag absolute right-3 top-3 text-slate-300 text-xs pointer-events-none"></i>
-              </div>
-            </div>
-
-            <div>
-              <label for="stockLot" class="block text-xs font-semibold text-slate-700 mb-1">Jumlah Lot</label>
-              <div class="relative">
-                <input type="number" id="stockLot" placeholder="Min. 1" min="1"
-                  class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400 transition-all"
-                  required>
-                <span
-                  class="absolute right-3 top-2.5 text-[11px] font-medium text-slate-400 pointer-events-none">Lot</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 2: Buy Price & Sell Price -->
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label for="buyPrice" class="block text-xs font-semibold text-slate-700 mb-1">Harga Beli / Lembar</label>
-              <div class="relative">
-                <span class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
-                <input type="number" id="buyPrice" placeholder="4500" min="1"
-                  class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400 transition-all"
-                  required>
-              </div>
-            </div>
-
-            <div>
-              <label for="sellPrice" class="block text-xs font-semibold text-slate-700 mb-1">Harga Jual / Lembar</label>
-              <div class="relative">
-                <span class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
-                <input type="number" id="sellPrice" placeholder="5000" min="1"
-                  class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400 transition-all"
-                  required>
-              </div>
-            </div>
-          </div>
-
-          <!-- Submit Button -->
-          <button type="button" id="btnCalculate"
-            class="w-full mt-2 bg-slate-900 hover:bg-slate-800 active:scale-[0.99] text-white font-bold text-sm py-3 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
-            <i class="fa-solid fa-chart-line text-sky-400"></i>
-            <span>Hitung Profit</span>
+        <!-- Segmented Tab Navigation -->
+        <div class="grid grid-cols-3 gap-1 bg-slate-100/90 p-1 rounded-2xl border border-slate-200/60 mb-5"
+          role="tablist">
+          <button type="button" id="tabProfit" role="tab" aria-selected="true"
+            class="tool-tab-btn py-2 px-1 rounded-xl text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1.5 bg-slate-900 text-white shadow-xs">
+            <i class="fa-solid fa-crosshairs text-[11px]"></i>
+            <span class="truncate">Sniper P/L</span>
           </button>
-        </form>
 
-        <!-- OUTPUT DISPLAY (Initially Hidden) -->
-        <div id="outputDisplay" class="hidden mt-4 pt-4 border-t border-slate-100 transition-all duration-300">
-          <!-- Dynamic Alert Banner -->
-          <div id="resultBanner" class="p-4 rounded-2xl border transition-all">
-            <div class="flex items-center justify-between mb-2">
-              <span id="resultBadge"
-                class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
-                <!-- Injected via JS -->
-              </span>
-              <span id="stockSummary" class="text-xs font-bold text-slate-600">
-                <!-- Emiten & Lembar -->
-              </span>
-            </div>
+          <button type="button" id="tabCompound" role="tab" aria-selected="false"
+            class="tool-tab-btn py-2 px-1 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all duration-200 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-chart-line text-[11px]"></i>
+            <span class="truncate">Compounding</span>
+          </button>
 
-            <!-- Main metrics: Nominal & Return % -->
-            <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-slate-200/50">
+          <button type="button" id="tabDividend" role="tab" aria-selected="false"
+            class="tool-tab-btn py-2 px-1 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all duration-200 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-sack-dollar text-[11px]"></i>
+            <span class="truncate">Dividen</span>
+          </button>
+        </div>
+
+        <!-- PANEL 1: SNIPER SAHAM (PROFIT/LOSS) -->
+        <div id="panelProfit" class="tool-panel animate-fade-in space-y-4">
+          <!-- Form Inputs -->
+          <form id="stockCalcForm" class="space-y-3.5" onsubmit="event.preventDefault();">
+            <!-- Row 1: Emiten & Lot -->
+            <div class="grid grid-cols-2 gap-3">
               <div>
-                <span class="block text-[11px] font-medium text-slate-500 uppercase tracking-wider">Profit / Loss
-                  (Rp)</span>
-                <span id="nominalResult" class="block text-base sm:text-lg font-extrabold tracking-tight">
-                  Rp 0
-                </span>
+                <label for="stockCode" class="block text-xs font-semibold text-slate-700 mb-1">Kode Emiten</label>
+                <div class="relative">
+                  <input type="text" id="stockCode" placeholder="e.g. BBRI" maxlength="6"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400 transition-all">
+                  <i class="fa-solid fa-tag absolute right-3 top-3 text-slate-300 text-xs pointer-events-none"></i>
+                </div>
               </div>
-              <div class="text-right">
-                <span class="block text-[11px] font-medium text-slate-500 uppercase tracking-wider">Return (%)</span>
-                <span id="percentResult" class="block text-base sm:text-lg font-extrabold tracking-tight">
-                  0.00%
-                </span>
+
+              <div>
+                <label for="stockLot" class="block text-xs font-semibold text-slate-700 mb-1">Jumlah Lot</label>
+                <div class="relative">
+                  <input type="number" id="stockLot" placeholder="Contoh: 10" min="1"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400 transition-all">
+                  <span
+                    class="absolute right-3 top-2.5 text-[11px] font-medium text-slate-400 pointer-events-none">Lot</span>
+                </div>
               </div>
             </div>
 
-            <!-- Detail Breakdown Modal & Jual -->
-            <div
-              class="mt-3 pt-2.5 border-t border-dashed border-slate-200 text-[11px] text-slate-500 flex justify-between">
-              <span>Modal Beli: <strong id="capitalBuy" class="text-slate-700 font-semibold">-</strong></span>
-              <span>Total Jual: <strong id="capitalSell" class="text-slate-700 font-semibold">-</strong></span>
+            <!-- Row 2: Buy Price & Sell Price -->
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="buyPrice" class="block text-xs font-semibold text-slate-700 mb-1">Harga Beli / Lbr</label>
+                <div class="relative">
+                  <span
+                    class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
+                  <input type="number" id="buyPrice" placeholder="4500" min="1"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400 transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label for="sellPrice" class="block text-xs font-semibold text-slate-700 mb-1">Harga Jual / Lbr</label>
+                <div class="relative">
+                  <span
+                    class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
+                  <input type="number" id="sellPrice" placeholder="5000" min="1"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400 transition-all">
+                </div>
+              </div>
             </div>
+
+            <!-- Quick TP preset buttons -->
+            <div>
+              <div class="flex items-center justify-between text-[10px] text-slate-500 font-medium mb-1.5">
+                <span>Quick Target Profit (dari Harga Beli):</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1.5">
+                <button type="button"
+                  class="btn-quick-tp px-2 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-sky-50 hover:text-sky-700 border border-slate-200/80 transition-all"
+                  data-tp="5">+5%</button>
+                <button type="button"
+                  class="btn-quick-tp px-2 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-sky-50 hover:text-sky-700 border border-slate-200/80 transition-all"
+                  data-tp="10">+10%</button>
+                <button type="button"
+                  class="btn-quick-tp px-2 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-sky-50 hover:text-sky-700 border border-slate-200/80 transition-all"
+                  data-tp="15">+15%</button>
+                <button type="button"
+                  class="btn-quick-tp px-2 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-sky-50 hover:text-sky-700 border border-slate-200/80 transition-all"
+                  data-tp="25">+25%</button>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" id="btnCalculate"
+              class="w-full bg-slate-900 hover:bg-slate-800 active:scale-[0.99] text-white font-bold text-xs py-3 px-4 rounded-xl shadow-sm transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-chart-line text-sky-400"></i>
+              <span>Hitung Profit Saham</span>
+            </button>
+          </form>
+
+          <!-- Profit Output Display -->
+          <div id="outputDisplay" class="hidden pt-3 border-t border-slate-100">
+            <div id="resultBanner" class="p-4 rounded-2xl border transition-all">
+              <div class="flex items-center justify-between mb-2">
+                <span id="resultBadge"
+                  class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full"></span>
+                <span id="stockSummary" class="text-xs font-bold text-slate-600"></span>
+              </div>
+              <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-slate-200/50">
+                <div>
+                  <span class="block text-[10px] font-medium text-slate-500 uppercase tracking-wider">Profit /
+                    Loss</span>
+                  <span id="nominalResult" class="block text-base sm:text-lg font-extrabold tracking-tight">Rp 0</span>
+                </div>
+                <div class="text-right">
+                  <span class="block text-[10px] font-medium text-slate-500 uppercase tracking-wider">Return (%)</span>
+                  <span id="percentResult" class="block text-base sm:text-lg font-extrabold tracking-tight">0.00%</span>
+                </div>
+              </div>
+              <div
+                class="mt-3 pt-2.5 border-t border-dashed border-slate-200 text-[11px] text-slate-500 flex justify-between">
+                <span>Modal Beli: <strong id="capitalBuy" class="text-slate-700 font-semibold">-</strong></span>
+                <span>Total Jual: <strong id="capitalSell" class="text-slate-700 font-semibold">-</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 2: KALKULATOR COMPOUNDING (BUNGA BERGULUNG) -->
+        <div id="panelCompound" class="tool-panel animate-fade-in hidden space-y-4">
+          <form id="compoundForm" class="space-y-3.5" onsubmit="event.preventDefault();">
+            <!-- Modal Awal & Invest Rutin -->
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="compoundInitial" class="block text-xs font-semibold text-slate-700 mb-1">Modal Awal</label>
+                <div class="relative">
+                  <span
+                    class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
+                  <input type="number" id="compoundInitial" value="5000000" min="0" step="500000"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-400 transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label for="compoundMonthly" class="block text-xs font-semibold text-slate-700 mb-1">Rutin Tiap
+                  Bulan</label>
+                <div class="relative">
+                  <span
+                    class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
+                  <input type="number" id="compoundMonthly" value="1000000" min="0" step="100000"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-400 transition-all">
+                </div>
+              </div>
+            </div>
+
+            <!-- Return & Jangka Waktu -->
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="compoundRate" class="block text-xs font-semibold text-slate-700 mb-1">Estimasi Return /
+                  Thn</label>
+                <div class="relative">
+                  <input type="number" id="compoundRate" value="15" min="1" max="100" step="0.5"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-3 pr-7 py-2.5 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-400 transition-all">
+                  <span class="absolute right-3 top-2.5 text-xs font-bold text-slate-400 pointer-events-none">%</span>
+                </div>
+              </div>
+
+              <div>
+                <label for="compoundYears" class="block text-xs font-semibold text-slate-700 mb-1">Durasi
+                  Investasi</label>
+                <div class="relative">
+                  <input type="number" id="compoundYears" value="10" min="1" max="40"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-3 pr-10 py-2.5 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-400 transition-all">
+                  <span
+                    class="absolute right-3 top-2.5 text-xs font-medium text-slate-400 pointer-events-none">Thn</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Duration Chips -->
+            <div class="flex items-center justify-between text-[10px] text-slate-500 font-medium">
+              <span>Preset Durasi:</span>
+              <div class="flex items-center gap-1.5">
+                <button type="button"
+                  class="btn-duration-preset px-2 py-0.5 rounded-md font-bold bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 border border-slate-200/80 transition-all"
+                  data-years="3">3 Thn</button>
+                <button type="button"
+                  class="btn-duration-preset px-2 py-0.5 rounded-md font-bold bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 border border-slate-200/80 transition-all"
+                  data-years="5">5 Thn</button>
+                <button type="button"
+                  class="btn-duration-preset px-2 py-0.5 rounded-md font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 transition-all"
+                  data-years="10">10 Thn</button>
+                <button type="button"
+                  class="btn-duration-preset px-2 py-0.5 rounded-md font-bold bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 border border-slate-200/80 transition-all"
+                  data-years="20">20 Thn</button>
+              </div>
+            </div>
+
+            <button type="button" id="btnRunCompound"
+              class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-bold text-xs py-3 px-4 rounded-xl shadow-sm transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-chart-line text-emerald-200"></i>
+              <span>Simulasikan Compounding</span>
+            </button>
+          </form>
+
+          <!-- Compounding Output & Chart Visual -->
+          <div id="compoundOutput" class="pt-3 border-t border-slate-100 space-y-3">
+            <!-- Hero Future Value Card -->
+            <div
+              class="p-4 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 text-white shadow-md relative overflow-hidden border border-slate-800">
+              <div class="flex items-center justify-between text-[11px] text-slate-300 font-medium mb-1">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-sparkles text-amber-400"></i> Nilai di
+                  Masa Depan</span>
+                <span id="compoundYearsLabel"
+                  class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full text-[10px] font-bold">10
+                  Tahun</span>
+              </div>
+              <div id="compoundTotalFuture" class="text-xl sm:text-2xl font-black tracking-tight text-white mt-1">
+                Rp 0
+              </div>
+
+              <!-- Two-tone ratio bar -->
+              <div class="mt-3">
+                <div class="flex justify-between text-[10px] text-slate-300 mb-1 font-semibold">
+                  <span class="flex items-center gap-1"><span
+                      class="w-2 h-2 rounded-full bg-sky-400 inline-block"></span> Modal Pokok: <span
+                      id="compoundPrincipalText" class="font-bold text-white">Rp 0</span></span>
+                  <span class="flex items-center gap-1"><span
+                      class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span> Cuan Bunga: <span
+                      id="compoundInterestText" class="font-bold text-emerald-300">Rp 0</span></span>
+                </div>
+                <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden flex">
+                  <div id="barPrincipal" class="bg-sky-400 h-full transition-all duration-500" style="width: 40%"></div>
+                  <div id="barInterest" class="bg-emerald-400 h-full transition-all duration-500" style="width: 60%">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Growth Chart -->
+            <div class="bg-slate-50/90 rounded-2xl p-3 border border-slate-200/80">
+              <div class="flex items-center justify-between text-[11px] mb-2 font-bold text-slate-700">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-chart-area text-emerald-600"></i> Kurva
+                  Pertumbuhan Eksponensial</span>
+                <span class="text-[10px] text-slate-400 font-normal">Tahunan</span>
+              </div>
+              <div class="relative w-full h-44">
+                <canvas id="compoundChart"></canvas>
+              </div>
+              <p class="text-[10px] text-slate-500 text-center mt-2 italic">
+                "Compounding adalah keajaiban dunia ke-8. Dia yang memahaminya, menghasilkannya."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 3: KALKULATOR DIVIDEN & PASSIVE INCOME -->
+        <div id="panelDividend" class="tool-panel animate-fade-in hidden space-y-4">
+          <!-- Preset Chips for Popular Dividend Stocks -->
+          <div>
+            <div class="flex items-center justify-between text-[11px] text-slate-500 font-medium mb-1.5">
+              <span>Emiten Dividen Favorit:</span>
+              <span class="text-[10px] text-slate-400">Klik untuk isi otomatis</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <button type="button"
+                class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
+                data-code="BBRI" data-price="4750" data-dps="319">BBRI (6.7%)</button>
+              <button type="button"
+                class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
+                data-code="BMRI" data-price="6700" data-dps="353">BMRI (5.3%)</button>
+              <button type="button"
+                class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
+                data-code="ASII" data-price="4900" data-dps="425">ASII (8.7%)</button>
+              <button type="button"
+                class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
+                data-code="ITMG" data-price="25500" data-dps="3300">ITMG (12.9%)</button>
+              <button type="button"
+                class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
+                data-code="PTBA" data-price="2450" data-dps="397">PTBA (16.2%)</button>
+            </div>
+          </div>
+
+          <form id="dividendForm" class="space-y-3.5" onsubmit="event.preventDefault();">
+            <!-- Row 1: Code & Lot -->
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="divCode" class="block text-xs font-semibold text-slate-700 mb-1">Kode Saham</label>
+                <div class="relative">
+                  <input type="text" id="divCode" value="BBRI" placeholder="e.g. BBRI" maxlength="6"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-400 transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label for="divLot" class="block text-xs font-semibold text-slate-700 mb-1">Kepemilikan (Lot)</label>
+                <div class="relative">
+                  <input type="number" id="divLot" value="50" min="1"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-400 transition-all">
+                  <span
+                    class="absolute right-3 top-2.5 text-[11px] font-medium text-slate-400 pointer-events-none">Lot</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Harga Saham & DPS -->
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="divPrice" class="block text-xs font-semibold text-slate-700 mb-1">Harga Beli / Lbr</label>
+                <div class="relative">
+                  <span
+                    class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
+                  <input type="number" id="divPrice" value="4750" min="1"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-400 transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label for="divDps" class="block text-xs font-semibold text-slate-700 mb-1">Dividen / Lbr (DPS)</label>
+                <div class="relative">
+                  <span
+                    class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
+                  <input type="number" id="divDps" value="319" min="0.1" step="0.1"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-400 transition-all">
+                </div>
+              </div>
+            </div>
+
+            <button type="button" id="btnRunDividend"
+              class="w-full bg-amber-600 hover:bg-amber-700 active:scale-[0.99] text-white font-bold text-xs py-3 px-4 rounded-xl shadow-sm transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-coins text-amber-200"></i>
+              <span>Hitung Passive Income Dividen</span>
+            </button>
+          </form>
+
+          <!-- Dividend Output Display -->
+          <div id="dividendOutput" class="pt-3 border-t border-slate-100 space-y-3">
+            <!-- Hero Dividend Card -->
+            <div
+              class="p-4 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50 to-orange-50/50 border border-amber-200/90 transition-all">
+              <div class="flex items-center justify-between mb-2">
+                <span id="divStockBadge"
+                  class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900">
+                  <i class="fa-solid fa-award"></i> Dividen Saham
+                </span>
+                <span id="divYieldBadge"
+                  class="text-xs font-extrabold text-amber-700 bg-white px-2.5 py-0.5 rounded-full border border-amber-200 shadow-xs">
+                  0.00% Yield
+                </span>
+              </div>
+
+              <!-- Main Cashflow Metrics -->
+              <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-amber-200/60">
+                <div>
+                  <span class="block text-[10px] font-medium text-slate-500 uppercase tracking-wider">Dividen
+                    Tahunan</span>
+                  <span id="divTotalAnnual" class="block text-base sm:text-lg font-black tracking-tight text-slate-900">
+                    Rp 0
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="block text-[10px] font-medium text-slate-500 uppercase tracking-wider">Passive Income /
+                    Bln</span>
+                  <span id="divMonthlyCashflow"
+                    class="block text-base sm:text-lg font-black tracking-tight text-emerald-700">
+                    Rp 0
+                  </span>
+                </div>
+              </div>
+
+              <!-- Payback & Comparison -->
+              <div class="mt-3 pt-2.5 border-t border-dashed border-amber-200 text-[11px] text-slate-600 space-y-1.5">
+                <div class="flex justify-between items-center">
+                  <span>Modal Investasi:</span>
+                  <strong id="divCapitalTotal" class="text-slate-900 font-bold">-</strong>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span>Estimasi Balik Modal (BEP Murni Dividen):</span>
+                  <strong id="divPaybackPeriod" class="text-amber-800 font-bold">-</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Yield Benchmark Comparison Bar -->
+            <div class="bg-slate-50 rounded-2xl p-3 border border-slate-200/70 space-y-2">
+              <div class="flex items-center justify-between text-[11px] font-bold text-slate-700">
+                <span>Perbandingan Yield Dividen vs Alternatif</span>
+              </div>
+              <div class="space-y-1.5 text-[10px]">
+                <div>
+                  <div class="flex justify-between text-slate-500 mb-0.5">
+                    <span>Yield Saham Ini</span>
+                    <strong id="yieldStockValue" class="text-amber-600">6.7%</strong>
+                  </div>
+                  <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                    <div id="yieldStockBar" class="bg-amber-500 h-full rounded-full transition-all duration-500"
+                      style="width: 67%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-slate-500 mb-0.5">
+                    <span>Bunga Deposito Bank (~3.5%)</span>
+                    <span>3.5%</span>
+                  </div>
+                  <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                    <div class="bg-slate-400 h-full rounded-full" style="width: 35%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-slate-500 mb-0.5">
+                    <span>Inflasi Tahunan RI (~2.8%)</span>
+                    <span>2.8%</span>
+                  </div>
+                  <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                    <div class="bg-slate-300 h-full rounded-full" style="width: 28%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -533,7 +804,7 @@
       <!-- 5. DOKUMENTASI KEGIATAN & KOMUNITAS (INTERACTIVE CAROUSEL) -->
       <section class="bg-white rounded-3xl p-5 card-shadow border border-slate-100/90 mt-6 overflow-hidden"
         aria-label="Dokumentasi Kegiatan">
-        
+
         <!-- Header Section -->
         <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
           <div class="flex items-center gap-2.5">
@@ -554,7 +825,7 @@
 
         <!-- Carousel Viewport Wrapper with Prev/Next Controls -->
         <div class="relative group">
-          
+
           <!-- Prev Button -->
           <button type="button" id="prevSlideBtn" aria-label="Foto Sebelumnya"
             class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/85 hover:bg-white text-slate-800 shadow-lg backdrop-blur-md flex items-center justify-center transition-all opacity-85 hover:opacity-100 active:scale-95 z-10 border border-slate-200/50">
@@ -570,17 +841,20 @@
           <!-- Scrollable Slides Container (Touch swipe + Snap) -->
           <div id="activityCarousel"
             class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar rounded-2xl border border-slate-200/80">
-            
+
             <!-- Slide 1 -->
             <div class="min-w-full w-full snap-center relative aspect-[4/5] max-h-[420px] bg-slate-900 flex-shrink-0">
               <img src="kegiatan-1.jpeg" alt="Kopdar Jadi Investor di Pasar Modal"
                 class="w-full h-full object-cover object-center" loading="lazy">
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
-                <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-emerald-500/90 px-2 py-0.5 rounded-full mb-1.5">
+              <div
+                class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
+                <span
+                  class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-emerald-500/90 px-2 py-0.5 rounded-full mb-1.5">
                   Kopdar Komunitas
                 </span>
                 <p class="text-xs sm:text-sm font-bold leading-snug">"Jadi Investor di Pasar Modal"</p>
-                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Sesi edukasi tatap muka & networking hangat bersama member ISP Semarang.</p>
+                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Sesi edukasi tatap muka & networking hangat
+                  bersama member ISP Semarang.</p>
               </div>
             </div>
 
@@ -588,12 +862,15 @@
             <div class="min-w-full w-full snap-center relative aspect-[4/5] max-h-[420px] bg-slate-900 flex-shrink-0">
               <img src="kegiatan-2.jpeg" alt="Edukasi 3P: Paham, Punya, Pantau"
                 class="w-full h-full object-cover object-center" loading="lazy">
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
-                <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-sky-500/90 px-2 py-0.5 rounded-full mb-1.5">
+              <div
+                class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
+                <span
+                  class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-sky-500/90 px-2 py-0.5 rounded-full mb-1.5">
                   Materi 3P
                 </span>
                 <p class="text-xs sm:text-sm font-bold leading-snug">Paham, Punya, & Pantau</p>
-                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Membangun fondasi analisis yang logis & disiplin psikologi trading.</p>
+                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Membangun fondasi analisis yang logis &
+                  disiplin psikologi trading.</p>
               </div>
             </div>
 
@@ -601,12 +878,15 @@
             <div class="min-w-full w-full snap-center relative aspect-[4/5] max-h-[420px] bg-slate-900 flex-shrink-0">
               <img src="kegiatan-3.jpeg" alt="Kopdar with Mirae Asset Sekuritas"
                 class="w-full h-full object-cover object-center" loading="lazy">
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
-                <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-orange-500/90 px-2 py-0.5 rounded-full mb-1.5">
+              <div
+                class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
+                <span
+                  class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-orange-500/90 px-2 py-0.5 rounded-full mb-1.5">
                   Mirae Asset Sekuritas
                 </span>
                 <p class="text-xs sm:text-sm font-bold leading-snug">Kopdar Eksklusif Ruang Training</p>
-                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Mentoring di fasilitas modern Mirae Asset untuk akselerasi skill analisis.</p>
+                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Mentoring di fasilitas modern Mirae Asset
+                  untuk akselerasi skill analisis.</p>
               </div>
             </div>
 
@@ -614,12 +894,15 @@
             <div class="min-w-full w-full snap-center relative aspect-[4/5] max-h-[420px] bg-slate-900 flex-shrink-0">
               <img src="kegiatan-4.jpeg" alt="Peserta Edukasi Saham Semarang"
                 class="w-full h-full object-cover object-center" loading="lazy">
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
-                <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-indigo-500/90 px-2 py-0.5 rounded-full mb-1.5">
+              <div
+                class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
+                <span
+                  class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-indigo-500/90 px-2 py-0.5 rounded-full mb-1.5">
                   Antusiasme Peserta
                 </span>
                 <p class="text-xs sm:text-sm font-bold leading-snug">Kelas Interaktif & Full Capacity</p>
-                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Sesi tanya jawab emiten saham, bedah fundamental, dan praktik charting.</p>
+                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Sesi tanya jawab emiten saham, bedah
+                  fundamental, dan praktik charting.</p>
               </div>
             </div>
 
@@ -627,12 +910,15 @@
             <div class="min-w-full w-full snap-center relative aspect-[4/5] max-h-[420px] bg-slate-900 flex-shrink-0">
               <img src="kegiatan-5.jpeg" alt="Workshop Produk Pasar Modal"
                 class="w-full h-full object-cover object-center" loading="lazy">
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
-                <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-rose-500/90 px-2 py-0.5 rounded-full mb-1.5">
+              <div
+                class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
+                <span
+                  class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-rose-500/90 px-2 py-0.5 rounded-full mb-1.5">
                   Workshop Finansial
                 </span>
                 <p class="text-xs sm:text-sm font-bold leading-snug">Bedah Produk Pasar Modal</p>
-                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Memahami instrumen saham, obligasi/sukuk, dan reksadana secara praktis.</p>
+                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Memahami instrumen saham, obligasi/sukuk, dan
+                  reksadana secara praktis.</p>
               </div>
             </div>
 
@@ -640,12 +926,15 @@
             <div class="min-w-full w-full snap-center relative aspect-[4/5] max-h-[420px] bg-slate-900 flex-shrink-0">
               <img src="kegiatan-6.jpeg" alt="Talkshow Finansial KLIK Digital Group"
                 class="w-full h-full object-cover object-center" loading="lazy">
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
-                <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-amber-500/90 px-2 py-0.5 rounded-full mb-1.5">
+              <div
+                class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
+                <span
+                  class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-amber-500/90 px-2 py-0.5 rounded-full mb-1.5">
                   Keynote Speaker
                 </span>
                 <p class="text-xs sm:text-sm font-bold leading-snug">Talkshow KLIK Digital Group</p>
-                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Sharing literasi finansial & strategi pengelolaan kekayaan bagi profesional.</p>
+                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Sharing literasi finansial & strategi
+                  pengelolaan kekayaan bagi profesional.</p>
               </div>
             </div>
 
@@ -653,12 +942,15 @@
             <div class="min-w-full w-full snap-center relative aspect-[4/5] max-h-[420px] bg-slate-900 flex-shrink-0">
               <img src="kegiatan-7.jpeg" alt="Closing Group Photo ISP Semarang"
                 class="w-full h-full object-cover object-center" loading="lazy">
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
-                <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-teal-500/90 px-2 py-0.5 rounded-full mb-1.5">
+              <div
+                class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent p-4 pt-10 text-white">
+                <span
+                  class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-teal-500/90 px-2 py-0.5 rounded-full mb-1.5">
                   Networking & Community
                 </span>
                 <p class="text-xs sm:text-sm font-bold leading-snug">Komunitas Bertumbuh Bersama</p>
-                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Belajar bareng, diskusi portofolio, dan saling mendukung menuju kemandirian finansial.</p>
+                <p class="text-[11px] text-slate-200 mt-0.5 leading-tight">Belajar bareng, diskusi portofolio, dan
+                  saling mendukung menuju kemandirian finansial.</p>
               </div>
             </div>
 
@@ -667,7 +959,8 @@
         </div>
 
         <!-- Pagination Dots Indicator -->
-        <div id="carouselDots" class="flex items-center justify-center gap-1.5 mt-3.5" role="tablist" aria-label="Slide Indicator">
+        <div id="carouselDots" class="flex items-center justify-center gap-1.5 mt-3.5" role="tablist"
+          aria-label="Slide Indicator">
           <!-- Generated & synchronized via JS -->
         </div>
 
@@ -707,12 +1000,98 @@
   <!-- JAVASCRIPT LOGIC -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Rupiah formatter helpers
+      const formatRupiah = (number) => {
+        return new Intl.NumberFormat('id-ID', {
+          style: 'currency',
+          currency: 'IDR',
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        }).format(number);
+      };
+
+      const formatShortRupiah = (number) => {
+        if (number >= 1e9) {
+          return 'Rp ' + (number / 1e9).toFixed(1) + ' M';
+        }
+        if (number >= 1e6) {
+          return 'Rp ' + (number / 1e6).toFixed(1) + ' Jt';
+        }
+        if (number >= 1e3) {
+          return 'Rp ' + (number / 1e3).toFixed(0) + ' Rb';
+        }
+        return 'Rp ' + number;
+      };
+
+      // ==========================================
+      // SMART TOOLS SUITE: TAB SWITCHER LOGIC
+      // ==========================================
+      const tabProfit = document.getElementById('tabProfit');
+      const tabCompound = document.getElementById('tabCompound');
+      const tabDividend = document.getElementById('tabDividend');
+
+      const panelProfit = document.getElementById('panelProfit');
+      const panelCompound = document.getElementById('panelCompound');
+      const panelDividend = document.getElementById('panelDividend');
+
+      const btnSuiteReset = document.getElementById('btnSuiteReset');
+      let currentActiveTab = 'profit';
+
+      const setTabActive = (activeBtn, activePanel, tabName) => {
+        currentActiveTab = tabName;
+        [tabProfit, tabCompound, tabDividend].forEach(btn => {
+          btn.setAttribute('aria-selected', 'false');
+          btn.className = 'tool-tab-btn py-2 px-1 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all duration-200 flex items-center justify-center gap-1.5';
+        });
+
+        [panelProfit, panelCompound, panelDividend].forEach(p => {
+          p.classList.add('hidden');
+        });
+
+        activeBtn.setAttribute('aria-selected', 'true');
+        activeBtn.className = 'tool-tab-btn py-2 px-1 rounded-xl text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1.5 bg-slate-900 text-white shadow-xs';
+        activePanel.classList.remove('hidden');
+
+        if (tabName === 'compound') {
+          setTimeout(() => {
+            calculateCompounding();
+          }, 60);
+        } else if (tabName === 'dividend') {
+          calculateDividend();
+        }
+      };
+
+      tabProfit.addEventListener('click', () => setTabActive(tabProfit, panelProfit, 'profit'));
+      tabCompound.addEventListener('click', () => setTabActive(tabCompound, panelCompound, 'compound'));
+      tabDividend.addEventListener('click', () => setTabActive(tabDividend, panelDividend, 'dividend'));
+
+      // Suite reset dispatcher
+      btnSuiteReset.addEventListener('click', () => {
+        if (currentActiveTab === 'profit') {
+          resetProfitCalculator();
+        } else if (currentActiveTab === 'compound') {
+          document.getElementById('compoundInitial').value = 5000000;
+          document.getElementById('compoundMonthly').value = 1000000;
+          document.getElementById('compoundRate').value = 15;
+          document.getElementById('compoundYears').value = 10;
+          calculateCompounding();
+        } else if (currentActiveTab === 'dividend') {
+          document.getElementById('divCode').value = 'BBRI';
+          document.getElementById('divLot').value = 50;
+          document.getElementById('divPrice').value = 4750;
+          document.getElementById('divDps').value = 319;
+          calculateDividend();
+        }
+      });
+
+      // ==========================================
+      // TOOL 1: SNIPER SAHAM (PROFIT/LOSS)
+      // ==========================================
       const stockCodeInput = document.getElementById('stockCode');
       const stockLotInput = document.getElementById('stockLot');
       const buyPriceInput = document.getElementById('buyPrice');
       const sellPriceInput = document.getElementById('sellPrice');
       const btnCalculate = document.getElementById('btnCalculate');
-      const btnReset = document.getElementById('btnReset');
 
       const outputDisplay = document.getElementById('outputDisplay');
       const resultBanner = document.getElementById('resultBanner');
@@ -723,49 +1102,51 @@
       const capitalBuy = document.getElementById('capitalBuy');
       const capitalSell = document.getElementById('capitalSell');
 
-      // Auto-uppercase emiten code
       stockCodeInput.addEventListener('input', (e) => {
         e.target.value = e.target.value.toUpperCase();
       });
 
-      // Rupiah formatter helper
-      const formatRupiah = (number) => {
-        return new Intl.NumberFormat('id-ID', {
-          style: 'currency',
-          currency: 'IDR',
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0
-        }).format(number);
-      };
+      // Quick TP Buttons
+      document.querySelectorAll('.btn-quick-tp').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const buyPrice = parseFloat(buyPriceInput.value);
+          if (!buyPrice || buyPrice <= 0) {
+            alert('Mohon isi Harga Beli terlebih dahulu untuk menggunakan Quick TP.');
+            buyPriceInput.focus();
+            return;
+          }
+          const tpPercent = parseFloat(btn.getAttribute('data-tp'));
+          const calculatedSell = Math.round(buyPrice * (1 + (tpPercent / 100)));
+          sellPriceInput.value = calculatedSell;
 
-      // Calculation Function
+          if (stockLotInput.value && parseFloat(stockLotInput.value) > 0) {
+            calculateStockProfit();
+          }
+        });
+      });
+
       const calculateStockProfit = () => {
         const code = stockCodeInput.value.trim() || 'SAHAM';
         const lot = parseFloat(stockLotInput.value);
         const buyPrice = parseFloat(buyPriceInput.value);
         const sellPrice = parseFloat(sellPriceInput.value);
 
-        // Validation
         if (!lot || lot <= 0 || !buyPrice || buyPrice <= 0 || !sellPrice || sellPrice <= 0) {
-          alert('Mohon isi Jumlah Lot, Harga Beli, dan Harga Jual dengan angka valid di atas 0.');
+          alert('Mohon lengkapi Jumlah Lot, Harga Beli, dan Target Harga Jual di atas 0.');
           return;
         }
 
-        // Calculations (1 Lot = 100 lembar saham)
         const totalShares = lot * 100;
         const totalBuy = buyPrice * totalShares;
         const totalSell = sellPrice * totalShares;
         const diffNominal = totalSell - totalBuy;
         const returnPercent = ((sellPrice - buyPrice) / buyPrice) * 100;
 
-        // Populate details
         stockSummary.textContent = `${code} (${lot} Lot / ${totalShares.toLocaleString('id-ID')} Lbr)`;
         capitalBuy.textContent = formatRupiah(totalBuy);
         capitalSell.textContent = formatRupiah(totalSell);
 
-        // Dynamic Styling (Profit vs Loss vs BEP)
         if (diffNominal > 0) {
-          // PROFIT (GREEN)
           resultBanner.className = 'p-4 rounded-2xl border bg-emerald-50/90 border-emerald-200 transition-all';
           resultBadge.className = 'inline-flex items-center gap-1 text-xs font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800';
           resultBadge.innerHTML = '<i class="fa-solid fa-arrow-trend-up"></i> Potensi Cuan';
@@ -776,7 +1157,6 @@
           percentResult.className = 'block text-base sm:text-lg font-extrabold tracking-tight text-emerald-700';
           percentResult.textContent = `+${returnPercent.toFixed(2)}%`;
         } else if (diffNominal < 0) {
-          // LOSS (RED)
           resultBanner.className = 'p-4 rounded-2xl border bg-rose-50/90 border-rose-200 transition-all';
           resultBadge.className = 'inline-flex items-center gap-1 text-xs font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800';
           resultBadge.innerHTML = '<i class="fa-solid fa-arrow-trend-down"></i> Potensi Loss';
@@ -787,7 +1167,6 @@
           percentResult.className = 'block text-base sm:text-lg font-extrabold tracking-tight text-rose-700';
           percentResult.textContent = `${returnPercent.toFixed(2)}%`;
         } else {
-          // BREAK EVEN (BEP)
           resultBanner.className = 'p-4 rounded-2xl border bg-slate-100 border-slate-200 transition-all';
           resultBadge.className = 'inline-flex items-center gap-1 text-xs font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700';
           resultBadge.innerHTML = '<i class="fa-solid fa-equals"></i> Break Even (BEP)';
@@ -799,13 +1178,10 @@
           percentResult.textContent = `0.00%`;
         }
 
-        // Display output smoothly
         outputDisplay.classList.remove('hidden');
-        outputDisplay.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       };
 
-      // Reset Form
-      const resetCalculator = () => {
+      const resetProfitCalculator = () => {
         stockCodeInput.value = '';
         stockLotInput.value = '';
         buyPriceInput.value = '';
@@ -814,16 +1190,255 @@
         stockCodeInput.focus();
       };
 
-      // Event Listeners
       btnCalculate.addEventListener('click', calculateStockProfit);
-      btnReset.addEventListener('click', resetCalculator);
 
-      // Support enter key on input fields
       [stockCodeInput, stockLotInput, buyPriceInput, sellPriceInput].forEach(input => {
         input.addEventListener('keypress', (e) => {
           if (e.key === 'Enter') {
             calculateStockProfit();
           }
+        });
+      });
+
+      // ==========================================
+      // TOOL 2: KALKULATOR COMPOUNDING (BUNGA BERGULUNG)
+      // ==========================================
+      const compoundInitialInput = document.getElementById('compoundInitial');
+      const compoundMonthlyInput = document.getElementById('compoundMonthly');
+      const compoundRateInput = document.getElementById('compoundRate');
+      const compoundYearsInput = document.getElementById('compoundYears');
+      const btnRunCompound = document.getElementById('btnRunCompound');
+
+      const compoundTotalFuture = document.getElementById('compoundTotalFuture');
+      const compoundYearsLabel = document.getElementById('compoundYearsLabel');
+      const compoundPrincipalText = document.getElementById('compoundPrincipalText');
+      const compoundInterestText = document.getElementById('compoundInterestText');
+      const barPrincipal = document.getElementById('barPrincipal');
+      const barInterest = document.getElementById('barInterest');
+
+      let compoundChartInstance = null;
+
+      // Preset duration buttons
+      document.querySelectorAll('.btn-duration-preset').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.btn-duration-preset').forEach(b => {
+            b.className = 'btn-duration-preset px-2 py-0.5 rounded-md font-bold bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 border border-slate-200/80 transition-all';
+          });
+          btn.className = 'btn-duration-preset px-2 py-0.5 rounded-md font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 transition-all';
+          compoundYearsInput.value = btn.getAttribute('data-years');
+          calculateCompounding();
+        });
+      });
+
+      const calculateCompounding = () => {
+        const initial = parseFloat(compoundInitialInput.value) || 0;
+        const monthly = parseFloat(compoundMonthlyInput.value) || 0;
+        const annualRate = parseFloat(compoundRateInput.value) || 0;
+        const years = parseInt(compoundYearsInput.value) || 1;
+
+        if (years <= 0 || (initial <= 0 && monthly <= 0)) {
+          return;
+        }
+
+        const monthlyRate = (annualRate / 100) / 12;
+        const totalMonths = years * 12;
+
+        let labels = [];
+        let principalData = [];
+        let futureData = [];
+
+        for (let y = 0; y <= years; y++) {
+          const m = y * 12;
+          const principal = initial + (monthly * m);
+          let fv = initial * Math.pow(1 + monthlyRate, m);
+          if (monthlyRate > 0) {
+            fv += monthly * ((Math.pow(1 + monthlyRate, m) - 1) / monthlyRate);
+          } else {
+            fv += monthly * m;
+          }
+
+          labels.push(`Thn ${y}`);
+          principalData.push(Math.round(principal));
+          futureData.push(Math.round(fv));
+        }
+
+        const finalFuture = futureData[futureData.length - 1];
+        const finalPrincipal = principalData[principalData.length - 1];
+        const finalInterest = Math.max(0, finalFuture - finalPrincipal);
+
+        compoundTotalFuture.textContent = formatRupiah(finalFuture);
+        compoundYearsLabel.textContent = `${years} Tahun (${years * 12} Bln)`;
+        compoundPrincipalText.textContent = formatShortRupiah(finalPrincipal);
+        compoundInterestText.textContent = formatShortRupiah(finalInterest);
+
+        const principalRatio = finalFuture > 0 ? (finalPrincipal / finalFuture) * 100 : 50;
+        const interestRatio = Math.max(0, 100 - principalRatio);
+        barPrincipal.style.width = `${principalRatio.toFixed(1)}%`;
+        barInterest.style.width = `${interestRatio.toFixed(1)}%`;
+
+        renderCompoundChart(labels, principalData, futureData);
+      };
+
+      const renderCompoundChart = (labels, principalData, futureData) => {
+        const canvas = document.getElementById('compoundChart');
+        if (!canvas) return;
+
+        if (compoundChartInstance) {
+          compoundChartInstance.destroy();
+        }
+
+        const ctx = canvas.getContext('2d');
+        const gradient = ctx.createLinearGradient(0, 0, 0, 160);
+        gradient.addColorStop(0, 'rgba(16, 185, 129, 0.35)');
+        gradient.addColorStop(1, 'rgba(16, 185, 129, 0.01)');
+
+        if (window.Chart) {
+          compoundChartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: labels,
+              datasets: [
+                {
+                  label: 'Total Aset (Compounding)',
+                  data: futureData,
+                  borderColor: '#10b981',
+                  backgroundColor: gradient,
+                  borderWidth: 2.5,
+                  fill: true,
+                  tension: 0.35,
+                  pointRadius: labels.length > 15 ? 0 : 3,
+                  pointHoverRadius: 5,
+                  pointBackgroundColor: '#10b981'
+                },
+                {
+                  label: 'Modal Disetor (Pokok)',
+                  data: principalData,
+                  borderColor: '#38bdf8',
+                  borderWidth: 2,
+                  borderDash: [4, 4],
+                  fill: false,
+                  tension: 0,
+                  pointRadius: 0
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              interaction: {
+                intersect: false,
+                mode: 'index',
+              },
+              plugins: {
+                legend: {
+                  position: 'bottom',
+                  labels: {
+                    boxWidth: 10,
+                    font: { size: 10, family: 'Plus Jakarta Sans', weight: '600' },
+                    color: '#64748b'
+                  }
+                },
+                tooltip: {
+                  backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                  padding: 10,
+                  titleFont: { size: 11, family: 'Plus Jakarta Sans' },
+                  bodyFont: { size: 11, family: 'Plus Jakarta Sans' },
+                  callbacks: {
+                    label: (context) => `${context.dataset.label}: ${formatRupiah(context.raw)}`
+                  }
+                }
+              },
+              scales: {
+                x: {
+                  grid: { display: false },
+                  ticks: { font: { size: 9 }, color: '#94a3b8', maxTicksLimit: 6 }
+                },
+                y: {
+                  grid: { color: 'rgba(226, 232, 240, 0.6)' },
+                  ticks: {
+                    font: { size: 9 },
+                    color: '#94a3b8',
+                    callback: (value) => formatShortRupiah(value)
+                  }
+                }
+              }
+            }
+          });
+        }
+      };
+
+      btnRunCompound.addEventListener('click', calculateCompounding);
+      [compoundInitialInput, compoundMonthlyInput, compoundRateInput, compoundYearsInput].forEach(inp => {
+        inp.addEventListener('input', () => {
+          calculateCompounding();
+        });
+      });
+
+      // ==========================================
+      // TOOL 3: KALKULATOR DIVIDEN (PASSIVE INCOME)
+      // ==========================================
+      const divCodeInput = document.getElementById('divCode');
+      const divLotInput = document.getElementById('divLot');
+      const divPriceInput = document.getElementById('divPrice');
+      const divDpsInput = document.getElementById('divDps');
+      const btnRunDividend = document.getElementById('btnRunDividend');
+
+      const divStockBadge = document.getElementById('divStockBadge');
+      const divYieldBadge = document.getElementById('divYieldBadge');
+      const divTotalAnnual = document.getElementById('divTotalAnnual');
+      const divMonthlyCashflow = document.getElementById('divMonthlyCashflow');
+      const divCapitalTotal = document.getElementById('divCapitalTotal');
+      const divPaybackPeriod = document.getElementById('divPaybackPeriod');
+      const yieldStockValue = document.getElementById('yieldStockValue');
+      const yieldStockBar = document.getElementById('yieldStockBar');
+
+      divCodeInput.addEventListener('input', (e) => {
+        e.target.value = e.target.value.toUpperCase();
+      });
+
+      // Popular stock presets
+      document.querySelectorAll('.btn-stock-preset').forEach(btn => {
+        btn.addEventListener('click', () => {
+          divCodeInput.value = btn.getAttribute('data-code');
+          divPriceInput.value = btn.getAttribute('data-price');
+          divDpsInput.value = btn.getAttribute('data-dps');
+          calculateDividend();
+        });
+      });
+
+      const calculateDividend = () => {
+        const code = divCodeInput.value.trim() || 'SAHAM';
+        const lot = parseFloat(divLotInput.value) || 0;
+        const price = parseFloat(divPriceInput.value) || 0;
+        const dps = parseFloat(divDpsInput.value) || 0;
+
+        if (lot <= 0 || price <= 0 || dps <= 0) {
+          return;
+        }
+
+        const totalShares = lot * 100;
+        const totalCapital = price * totalShares;
+        const annualDividend = dps * totalShares;
+        const monthlyCashflow = annualDividend / 12;
+        const yieldPercent = (dps / price) * 100;
+        const paybackYears = yieldPercent > 0 ? (100 / yieldPercent).toFixed(1) : 0;
+
+        divStockBadge.innerHTML = `<i class="fa-solid fa-gem text-amber-500"></i> ${code} (${lot} Lot)`;
+        divYieldBadge.textContent = `${yieldPercent.toFixed(2)}% Yield`;
+        divTotalAnnual.textContent = formatRupiah(annualDividend);
+        divMonthlyCashflow.textContent = `+${formatRupiah(monthlyCashflow)} / bln`;
+        divCapitalTotal.textContent = formatRupiah(totalCapital);
+        divPaybackPeriod.textContent = `~${paybackYears} Tahun Modal Kembali`;
+
+        yieldStockValue.textContent = `${yieldPercent.toFixed(1)}%`;
+        const barWidth = Math.min(100, Math.max(10, (yieldPercent / 18) * 100));
+        yieldStockBar.style.width = `${barWidth.toFixed(0)}%`;
+      };
+
+      btnRunDividend.addEventListener('click', calculateDividend);
+      [divCodeInput, divLotInput, divPriceInput, divDpsInput].forEach(inp => {
+        inp.addEventListener('input', () => {
+          calculateDividend();
         });
       });
 
@@ -848,9 +1463,8 @@
           const dot = document.createElement('button');
           dot.type = 'button';
           dot.setAttribute('aria-label', `Pindah ke slide ${idx + 1}`);
-          dot.className = `h-2 rounded-full transition-all duration-300 ${
-            idx === 0 ? 'w-6 bg-sky-500' : 'w-2 bg-slate-200 hover:bg-slate-300'
-          }`;
+          dot.className = `h-2 rounded-full transition-all duration-300 ${idx === 0 ? 'w-6 bg-sky-500' : 'w-2 bg-slate-200 hover:bg-slate-300'
+            }`;
           dot.addEventListener('click', () => {
             goToSlide(idx);
           });
