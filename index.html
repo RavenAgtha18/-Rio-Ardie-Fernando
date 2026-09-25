@@ -643,19 +643,19 @@
             <div class="flex flex-wrap gap-1.5">
               <button type="button"
                 class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
-                data-code="BBRI" data-price="4750" data-dps="319">BBRI (6.7%)</button>
+                data-code="BMRI" data-price="5000" data-dps="525">BMRI (10,5%)</button>
               <button type="button"
                 class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
-                data-code="BMRI" data-price="6700" data-dps="353">BMRI (5.3%)</button>
+                data-code="DMAS" data-price="160" data-dps="16.48">DMAS (10,3%)</button>
               <button type="button"
                 class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
-                data-code="ASII" data-price="4900" data-dps="425">ASII (8.7%)</button>
+                data-code="BBRI" data-price="4500" data-dps="396">BBRI (8,8%)</button>
               <button type="button"
                 class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
-                data-code="ITMG" data-price="25500" data-dps="3300">ITMG (12.9%)</button>
+                data-code="UNTR" data-price="25000" data-dps="1725">UNTR (6,9%)</button>
               <button type="button"
                 class="btn-stock-preset px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 hover:bg-amber-50 hover:text-amber-800 border border-slate-200/80 transition-all"
-                data-code="PTBA" data-price="2450" data-dps="397">PTBA (16.2%)</button>
+                data-code="AADI" data-price="8000" data-dps="720">AADI (9%)</button>
             </div>
           </div>
 
@@ -665,7 +665,7 @@
               <div>
                 <label for="divCode" class="block text-xs font-semibold text-slate-700 mb-1">Kode Saham</label>
                 <div class="relative">
-                  <input type="text" id="divCode" value="BBRI" placeholder="e.g. BBRI" maxlength="6"
+                  <input type="text" id="divCode" value="BMRI" placeholder="e.g. BMRI" maxlength="6"
                     class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-400 transition-all">
                 </div>
               </div>
@@ -688,7 +688,7 @@
                 <div class="relative">
                   <span
                     class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
-                  <input type="number" id="divPrice" value="4750" min="1"
+                  <input type="number" id="divPrice" value="5000" min="1"
                     class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-400 transition-all">
                 </div>
               </div>
@@ -698,7 +698,7 @@
                 <div class="relative">
                   <span
                     class="absolute left-3 top-2.5 text-xs font-semibold text-slate-400 pointer-events-none">Rp</span>
-                  <input type="number" id="divDps" value="319" min="0.1" step="0.1"
+                  <input type="number" id="divDps" value="525" min="0.01" step="0.01"
                     class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-3 py-2.5 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-400 transition-all">
                 </div>
               </div>
@@ -768,11 +768,11 @@
                 <div>
                   <div class="flex justify-between text-slate-500 mb-0.5">
                     <span>Yield Saham Ini</span>
-                    <strong id="yieldStockValue" class="text-amber-600">6.7%</strong>
+                    <strong id="yieldStockValue" class="text-amber-600">10.5%</strong>
                   </div>
                   <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
                     <div id="yieldStockBar" class="bg-amber-500 h-full rounded-full transition-all duration-500"
-                      style="width: 67%"></div>
+                      style="width: 58%"></div>
                   </div>
                 </div>
                 <div>
@@ -1076,10 +1076,10 @@
           document.getElementById('compoundYears').value = 10;
           calculateCompounding();
         } else if (currentActiveTab === 'dividend') {
-          document.getElementById('divCode').value = 'BBRI';
+          document.getElementById('divCode').value = 'BMRI';
           document.getElementById('divLot').value = 50;
-          document.getElementById('divPrice').value = 4750;
-          document.getElementById('divDps').value = 319;
+          document.getElementById('divPrice').value = 5000;
+          document.getElementById('divDps').value = 525;
           calculateDividend();
         }
       });
